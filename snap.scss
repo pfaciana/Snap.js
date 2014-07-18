@@ -1,0 +1,54 @@
+//
+// @import "cwt-common";
+//
+
+html, body {
+	@include clear-box;
+}
+
+.snap-content {
+	@include relative(2);
+	@include size(auto, auto);
+	@include overflow-scroll;
+	@include translate3d(0, 0, 0);
+}
+
+.cwt-app .snap-content {
+	@include at-non-mobile {
+		@include absolute(2, 0, 0, 0, 0);
+	}
+	@include at-print {
+		position: static;
+	}
+}
+
+.snap-drawers {
+	@include absolute(null, 0, 0, 0, 0);
+	@include size(auto, auto);
+}
+
+.snap-drawer {
+	@include absolute(null, 0, auto, 0, auto);
+	@include size(265px, auto);
+	@include overflow-scroll;
+	@include transition(width 0.3s ease);
+	display: none;
+}
+
+.snap-drawer-left {
+	@include position(1, null, null, null, 0);
+}
+
+.snap-drawer-right {
+	@include position(1, null, 0, null, null);
+}
+
+.snapjs-left .snap-drawer-left,
+.snapjs-right .snap-drawer-right {
+	display: inherit;
+}
+
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+	@include size(100%, null);
+}
