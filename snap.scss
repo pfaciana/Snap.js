@@ -13,12 +13,19 @@ html, body {
 	@include translate3d(0, 0, 0);
 }
 
-.cwt-app .snap-content {
-	@include at-non-mobile {
-		@include absolute(2, 0, 0, 0, 0);
+// .snap-content nested and repeated to correctly
+// implement $root: false, there is no other way,
+// currently, to do this without repeating .snap-content
+.cwt-app {
+	@include at-non-mobile($root: false) {
+		.snap-content {
+			@include absolute(2, 0, 0, 0, 0);
+		}
 	}
-	@include at-print {
-		position: static;
+	@include at-print($root: false) {
+		.snap-content {
+			position: static;
+		}
 	}
 }
 

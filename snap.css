@@ -29,7 +29,7 @@ body {
   }
 }
 
-.lt-ie9 .cwt-app .snap-content {
+.cwt-app.lt-ie9 .snap-content {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -44,7 +44,7 @@ body {
   }
 }
 
-.lt-ie9.print-mode .cwt-app .snap-content {
+.cwt-app.lt-ie9.print-mode .snap-content {
   position: static;
 }
 
