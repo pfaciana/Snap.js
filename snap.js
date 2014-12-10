@@ -492,6 +492,8 @@
 
 						if (element.addEventListener) {
 							element.addEventListener(event, callback);
+						} else if (window.jQuery) {
+							jQuery(element).on(event, callback);
 						} else if (element.attachEvent) {
 							element.attachEvent(event, callback);
 						}
