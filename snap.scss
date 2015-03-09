@@ -8,7 +8,7 @@ html, body {
 
 .snap-content {
 	@include relative(2);
-	@include size(auto, auto);
+	@include cwt-size(auto, auto);
 	@include overflow-scroll;
 	@include translate3d(0, 0, 0);
 }
@@ -31,12 +31,12 @@ html, body {
 
 .snap-drawers {
 	@include absolute(null, 0, 0, 0, 0);
-	@include size(auto, auto);
+	@include cwt-size(auto, auto);
 }
 
 .snap-drawer {
 	@include absolute(null, 0, auto, 0, auto);
-	@include size(265px, auto);
+	@include cwt-size(265px, auto);
 	@include overflow-scroll;
 	@include transition(width 0.3s ease);
 	display: none;
@@ -57,5 +57,5 @@ html, body {
 
 .snapjs-expand-left .snap-drawer-left,
 .snapjs-expand-right .snap-drawer-right {
-	@include size(100%, null);
+	@include cwt-size(100%, null);
 }

@@ -1,7 +1,10 @@
 {
 	"name": "Snap.js",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"authors": "Phil Faciana <phil@columbuswebtech.com>",
 	"description": "A Library for creating beautiful mobile shelfs in Javascript (Facebook and Path style side menus)",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"cwt-sass": "http://bower.cwtrepos.com/package/cwt-common-sass-lib.zip"
+	}
 }
